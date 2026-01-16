@@ -8,5 +8,19 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('proyecto');
+  contador = 10;
+  counterSignal = signal(10);
+
+  variation(value:number) {
+    this.contador += value;
+    this.counterSignal.update( current => current + value );
+  }
+  reset() {
+    this.contador = 10;
+    this.counterSignal.set(0);
+  }
+
+
+
+
 }
