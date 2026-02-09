@@ -1,11 +1,8 @@
-<h1>Contador</h1>
-<hr/>
-<p>Valor del contador: {{contador}}</p>
-<button (click)="variation(1)">+1</button>
-<button (click)="reset()">Reset</button>
-<button (click)="variation(-1)">-1</button>
-<hr/>
+<app-nav></app-nav>
 
-<p>Valor de la señal {{counterSignal()}}</p>
+<section class = "mx-5 my-2">
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+</section>
+<app-footer></app-footer>
+

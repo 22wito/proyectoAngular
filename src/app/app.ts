@@ -1,26 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { Nav } from './components/nav/nav-bar';
+import { Footer } from './components/footer/footer';
+import { HeroPageComponent } from './pages/hero/hero-page.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, Nav, Footer, HeroPageComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  contador = 10;
-  counterSignal = signal(10);
-
-  variation(value:number) {
-    this.contador += value;
-    this.counterSignal.update( current => current + value );
-  }
-  reset() {
-    this.contador = 10;
-    this.counterSignal.set(0);
-  }
-
-
 
 
 }
